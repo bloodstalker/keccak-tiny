@@ -10,10 +10,6 @@ as the Keccak team's optimized permutation.
 
     > clang -O3 -march=native -std=c11 -Wextra -dynamic -shared keccak-tiny.c -o libkeccak-tiny.dylib
 
-If you don't have a modern libc that includes the `memset_s` function,
-you can just add `-D"memset_s(W,WL,V,OL)=memset(W,V,OL)` to the command
-line.
-
 ## Using
 
 Build the library, include the header, and do, e.g.,

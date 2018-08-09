@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#ifndef __STDC_LIB_EXT1__
+#define memset_s(W,WL,V,OL) memset(W,V,OL)
+#endif
+
 #define decshake(bits) \
   int shake##bits(uint8_t*, size_t, const uint8_t*, size_t);
 
